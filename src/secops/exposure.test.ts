@@ -1,0 +1,2 @@
+import test from "node:test"; import assert from "node:assert/strict"; import { prioritizeExposure } from "./exposure.js";
+test("known exploited exposed verified vulnerability is critical",()=>assert.equal(prioritizeExposure({cvss:10,epss:1,kev:true,internetExposed:true,assetCriticality:10,exploitVerified:true}).priority,"CRITICAL"));
