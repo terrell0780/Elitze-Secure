@@ -1,0 +1,2 @@
+import test from "node:test"; import assert from "node:assert/strict"; import { decideContent } from "./content-integrity.js";
+test("missing provenance blocks publishing",()=>assert.equal(decideContent({provenanceVerified:false,evidenceVerified:true,uniqueness:100,factuality:100,staleness:100,evidenceState:"OBSERVED",hardFailure:false}),"BLOCK"));
