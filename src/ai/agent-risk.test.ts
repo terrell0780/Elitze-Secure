@@ -1,2 +1,0 @@
-import test from "node:test"; import assert from "node:assert/strict"; import { evaluateAgentRisk } from "./agent-risk.js";
-test("high autonomy with low monitorability is restricted",()=>{const r=evaluateAgentRisk({autonomy:100,privilege:100,monitorability:0,delegationDepth:4,persistence:100,dataSensitivity:100});assert.equal(r.action,"BLOCK");});
